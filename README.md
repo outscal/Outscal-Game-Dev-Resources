@@ -11,6 +11,7 @@ An open archive of game development resources — roadmaps, cheat sheets, deep-d
 | Folder | What's inside |
 |---|---|
 | [humans-of-gaming/](humans-of-gaming/) | 44 stories from founders, engineers, designers, and producers across the gaming industry |
+| [practice/](practice/) | 29 quizzes (295 questions) on Unity, engine fundamentals, and popular games |
 | [cheat-sheets/](cheat-sheets/) | Quick-reference sheets for Unity, Unreal, and cross-engine migration |
 | [roadmaps-and-project-ideas/](roadmaps-and-project-ideas/) | Learning paths (Full Stack, Unity, DSA, AAA) and things to build along the way |
 | [deep-dives/](deep-dives/) | Game mechanic breakdowns and how game developers think about code |
