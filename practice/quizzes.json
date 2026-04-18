@@ -3,6 +3,7 @@
     "name": "Unity Event Functions - Clash Royale",
     "slug": "unity-event-function-clash-royale",
     "description": "An assessment to test the correct usage of Unity's events and lifecycle functions in the context of the game \"Clash Royale\"",
+    "image": "images/unity-event-function-clash-royale.png",
     "buttonText": null,
     "questions": [
       {
@@ -284,6 +285,7 @@
     "name": "Unity NavMesh Agent",
     "slug": "unity-navmesh-agent",
     "description": "This assessment evaluates your understanding of Unity's NavMesh system, including navigation baking, NavMeshAgents, pathfinding, obstacles, and scripting interactions with NavMesh to create AI-driven movement.",
+    "image": "images/unity-navmesh-agent.webp",
     "buttonText": null,
     "questions": [
       {
@@ -565,6 +567,7 @@
     "name": "Unity Component Communication",
     "slug": "unity-component-communication",
     "description": "This assessment evaluates your understanding of Unity's component-based architecture, how GameObjects and their components interact, the hierarchy system with nested GameObjects, and how to reference them in scripts.",
+    "image": "images/unity-component-communication.png",
     "buttonText": null,
     "questions": [
       {
@@ -842,6 +845,7 @@
     "name": "Unity and Unreal: Beginner",
     "slug": "unity-unreal-beginner",
     "description": "Test your basic knowledge of Unity and Unreal Engine with this beginner-friendly quiz on game development fundamentals.",
+    "image": "images/unity-unreal-beginner.png",
     "buttonText": null,
     "questions": [
       {
@@ -1393,6 +1397,7 @@
     "name": "Unity Platformer: Beginner",
     "slug": "unity-platformer-beginner",
     "description": "Test your beginner-level knowledge of Unity platformer development with this engaging quiz.",
+    "image": "images/unity-platformer-beginner.webp",
     "buttonText": null,
     "questions": [
       {
@@ -1539,6 +1544,7 @@
     "name": "Unity Endless Runner: Beginner",
     "slug": "unity-endless-runner-beginner",
     "description": "Challenge yourself with this beginner-friendly quiz on building an endless runner in Unity!",
+    "image": "images/unity-endless-runner-beginner.webp",
     "buttonText": null,
     "questions": [
       {
@@ -1685,6 +1691,7 @@
     "name": "Unity Open World: Beginner",
     "slug": "unity-open-world-beginner",
     "description": "Dive into the fundamentals of open-world game development in Unity with this beginner-friendly quiz.",
+    "image": "images/unity-open-world-beginner.webp",
     "buttonText": null,
     "questions": [
       {
@@ -1831,6 +1838,7 @@
     "name": "Unity: Physics, Movement, MonoBehaviour ",
     "slug": "unity-physics-movement-monobehaviour",
     "description": "Test your understanding of Unity’s Physics, Movement, and MonoBehaviour with this insightful beginner-friendly quiz!",
+    "image": "images/unity-physics-movement-monobehaviour.webp",
     "buttonText": null,
     "questions": [
       {
@@ -2193,6 +2201,7 @@
     "name": "Unity: Rigidbody",
     "slug": "unity-rigidbody",
     "description": "Assess your knowledge of Unity's Rigidbody component and its advanced physics interactions with this in-depth quiz!",
+    "image": "images/unity-rigidbody.webp",
     "buttonText": null,
     "questions": [
       {
@@ -2663,6 +2672,7 @@
     "name": "Unity: Knowing Unity Part 1",
     "slug": "unity-knowing-unity-part-1",
     "description": "Test your Unity knowledge with this comprehensive quiz, covering everything from MonoBehaviour basics to advanced physics, rendering, and optimization techniques across multiple difficulty levels!",
+    "image": "images/unity-knowing-unity-part-1.webp",
     "buttonText": null,
     "questions": [
       {
@@ -3214,6 +3224,7 @@
     "name": "Unity: Knowing Unity Part 2",
     "slug": "unity-knowing-unity-part-2",
     "description": "Test your Unity expertise with this quiz, covering initialization to advanced rendering and physics!",
+    "image": "images/unity-knowing-unity-part-2.webp",
     "buttonText": null,
     "questions": [
       {
@@ -3765,6 +3776,7 @@
     "name": "Unity: Knowing Unity Part 3",
     "slug": "unity-knowing-unity-part-3",
     "description": "Take your Unity skills to the next level with Part 3 of this quiz, covering scripting, physics, rendering, and performance optimization!",
+    "image": "images/unity-knowing-unity-part-3.webp",
     "buttonText": null,
     "questions": [
       {
@@ -4316,6 +4328,7 @@
     "name": "Unity: Input System",
     "slug": "unity-input-system",
     "description": "Challenge yourself with this Unity Input System quiz! Test your skills in input mapping, device handling, and action events.",
+    "image": "images/unity-input-system.webp",
     "buttonText": null,
     "questions": [
       {
@@ -4867,6 +4880,7 @@
     "name": "Unity: UI",
     "slug": "unity-ui",
     "description": "Test your Unity UI knowledge with this quiz! Explore essential concepts like Canvas, EventSystem and many more. ",
+    "image": "images/unity-ui.webp",
     "buttonText": null,
     "questions": [
       {
@@ -5688,6 +5702,7 @@
     "name": "Unity: Animations",
     "slug": "unity-animations",
     "description": "Test your Unity Animations knowledge with this quiz! Explore concepts like Animator Controller, Blend Trees, and many more.",
+    "image": "images/unity-animations.webp",
     "buttonText": null,
     "questions": [
       {
@@ -6239,6 +6254,7 @@
     "name": "Red Dead Redemption 2",
     "slug": "gamer-trivia-rdr2",
     "description": null,
+    "image": "images/gamer-trivia-rdr2.png",
     "buttonText": "LET'S RIDE!",
     "questions": [
       {
@@ -6385,6 +6401,7 @@
     "name": "Assassin's Creed",
     "slug": "gamer-trivia-assassinscreed",
     "description": null,
+    "image": "images/gamer-trivia-assassinscreed.png",
     "buttonText": "LET'S PLAY!",
     "questions": [
       {
@@ -6531,6 +6548,7 @@
     "name": "Fortnite",
     "slug": "gamer-trivia-fortnite",
     "description": null,
+    "image": "images/gamer-trivia-fortnite.png",
     "buttonText": "LET'S PLAY!",
     "questions": [
       {
@@ -6677,6 +6695,7 @@
     "name": "Minecraft",
     "slug": "gamer-trivia-minecraft",
     "description": null,
+    "image": "images/gamer-trivia-minecraft.png",
     "buttonText": "LET'S MINE!",
     "questions": [
       {
@@ -6823,6 +6842,7 @@
     "name": "Valorant",
     "slug": "gamer-trivia-valorant",
     "description": null,
+    "image": "images/gamer-trivia-valorant.png",
     "buttonText": "LET'S AIM!",
     "questions": [
       {
@@ -6969,6 +6989,7 @@
     "name": "God of War",
     "slug": "gamer-trivia-godofwar",
     "description": null,
+    "image": "images/gamer-trivia-godofwar.png",
     "buttonText": "LET'S KILL!",
     "questions": [
       {
@@ -7115,6 +7136,7 @@
     "name": "GTA 5",
     "slug": "gamer-trivia-gta5",
     "description": null,
+    "image": "images/gamer-trivia-gta5.png",
     "buttonText": "LET'S ROB!",
     "questions": [
       {
@@ -7261,6 +7283,7 @@
     "name": "Star Wars Battlefront 2",
     "slug": "gamer-trivia-starwars",
     "description": null,
+    "image": "images/gamer-trivia-starwars.png",
     "buttonText": "LET'S BLAST!",
     "questions": [
       {
@@ -7407,6 +7430,7 @@
     "name": "Counter Strike 2",
     "slug": "gamer-trivia-cs2",
     "description": null,
+    "image": "images/gamer-trivia-cs2.png",
     "buttonText": "LET'S FIRE!",
     "questions": [
       {
@@ -7553,6 +7577,7 @@
     "name": "Death Stranding 2",
     "slug": "gamer-trivia-deathstranding2",
     "description": null,
+    "image": "images/gamer-trivia-deathstranding2.png",
     "buttonText": "LET'S DELIVER!",
     "questions": [
       {
@@ -7699,6 +7724,7 @@
     "name": "RUST",
     "slug": "gamer-trivia-rust",
     "description": null,
+    "image": "images/gamer-trivia-rust.png",
     "buttonText": "LET'S RAID!",
     "questions": [
       {
@@ -7845,6 +7871,7 @@
     "name": "Batman: Arkham Knight",
     "slug": "gamer-trivia-batmanak",
     "description": null,
+    "image": "images/gamer-trivia-batmanak.png",
     "buttonText": "LET'S COUNTER!",
     "questions": [
       {
@@ -7991,6 +8018,7 @@
     "name": "Ghost of Tsushima",
     "slug": "gamer-trivia-got",
     "description": null,
+    "image": "images/gamer-trivia-got.png",
     "buttonText": "LET'S SLASH!",
     "questions": [
       {
@@ -8137,6 +8165,7 @@
     "name": "DOOM",
     "slug": "gamer-trivia-doom",
     "description": null,
+    "image": "images/gamer-trivia-doom.png",
     "buttonText": "LET'S SLAY!",
     "questions": [
       {

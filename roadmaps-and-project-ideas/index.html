@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Roadmaps & Project Ideas — The Outscal Resource Archive</title>
+<meta name="description" content="The &quot;what do I learn next&quot; and the &quot;what do I build with it&quot; — in one place. Four tracks, two shelves of projects, zero fluff." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+<style>
+  .crumb { padding: 28px 0 0; font-size: 13px; color: var(--muted); }
+  .crumb a { color: var(--muted); text-decoration: none; transition: color .15s ease; }
+  .crumb a:hover { color: var(--ink); }
+  .crumb .sep { opacity: .4; margin: 0 8px; }
+
+  .hero { padding: 40px 0 56px; border-bottom: 1px solid var(--rule); }
+  .hero .eyebrow { margin-bottom: 16px; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.02; letter-spacing: -0.03em;
+    margin: 0 0 20px; font-weight: 700;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(180deg, transparent 58%, var(--yellow) 58% 92%, transparent 92%);
+    padding: 0 .04em;
+  }
+  .hero p { font-size: 17px; color: var(--ink-soft); max-width: 640px; margin: 0; }
+
+  /* Grid of PDF previews — auto-fit so 3 PDFs on desktop become 2 then 1 on narrower screens. */
+  .pdf-grid {
+    padding: 56px 0 96px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px 32px;
+  }
+
+  .pdf-card {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .pdf-card .pdf-viewer {
+    width: 100%;
+    aspect-ratio: 210 / 297;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: var(--paper-tint);
+    display: block;
+  }
+  .pdf-card .pdf-viewer:fullscreen {
+    width: 100vw; height: 100vh;
+    border-radius: 0; border: 0;
+    max-width: none; aspect-ratio: auto;
+  }
+  .pdf-card .txt {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .pdf-card .txt .num {
+    font-family: var(--serif);
+    font-size: 11px; letter-spacing: .14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .pdf-card .txt h3 {
+    font-family: var(--serif);
+    font-size: 20px; font-weight: 700;
+    letter-spacing: -0.015em;
+    margin: 2px 0 0;
+    line-height: 1.2;
+  }
+  .pdf-card .txt p {
+    margin: 4px 0 0; color: var(--ink-soft);
+    font-size: 13px; line-height: 1.5;
+  }
+
+  .pdf-card .actions {
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .pdf-card .actions .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 12px;
+    border: 1px solid var(--rule); border-radius: 999px;
+    font-size: 12px; font-weight: 500;
+    background: var(--paper); color: var(--ink);
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .pdf-card .actions .btn:hover { border-color: var(--ink); background: var(--paper-tint); }
+  .pdf-card .actions .btn svg { display: block; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="../index.html" aria-label="The Outscal Resource Archive — home">
+      <img class="mark" src="../outscal.gif" alt="" aria-hidden="true" />
+      <span class="title">
+        <span>The Archive<span class="dot">.</span></span>
+        <span class="by">by Outscal</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="../humans-of-gaming/index.html">Stories</a>
+      <a href="../practice/index.html">Practice</a>
+      <a href="../index.html#library" class="current">Library</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="../index.html">← The Archive</a>
+  <span class="sep">·</span>
+  <a href="../index.html#library">Library</a>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Library · 01 of 04</div>
+    <h1>Roadmaps &amp; <span class="accent">Project Ideas</span>.</h1>
+    <p>The &quot;what do I learn next&quot; and the &quot;what do I build with it&quot; — in one place. Four tracks, two shelves of projects, zero fluff.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="pdf-grid">
+      <div class="pdf-card">
+        <div class="txt">
+          <div class="num">№ 01</div>
+          <h3>Game Dev Roadmaps</h3>
+          <p>Four tracks laid out end-to-end: <strong>Full Stack</strong>, <strong>Unity</strong>, <strong>DSA</strong>, <strong>AAA</strong>.</p>
+        </div>
+        <iframe class="pdf-viewer" src="game-dev-roadmaps.pdf#toolbar=1&amp;navpanes=0" title="Game Dev Roadmaps"></iframe>
+        <div class="actions">
+          <button class="btn btn-fullscreen">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/>
+            </svg>
+            <span class="label">Fullscreen</span>
+          </button>
+          <a class="btn" href="game-dev-roadmaps.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7"/><polyline points="8 7 17 7 17 16"/>
+            </svg>
+            Open
+          </a>
+        </div>
+      </div>
+      <div class="pdf-card">
+        <div class="txt">
+          <div class="num">№ 02</div>
+          <h3>Game Project Roadmaps</h3>
+          <p>Step-by-step breakdowns for building specific games. What to wire up first, what depends on what.</p>
+        </div>
+        <iframe class="pdf-viewer" src="game-project-roadmaps.pdf#toolbar=1&amp;navpanes=0" title="Game Project Roadmaps"></iframe>
+        <div class="actions">
+          <button class="btn btn-fullscreen">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/>
+            </svg>
+            <span class="label">Fullscreen</span>
+          </button>
+          <a class="btn" href="game-project-roadmaps.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7"/><polyline points="8 7 17 7 17 16"/>
+            </svg>
+            Open
+          </a>
+        </div>
+      </div>
+      <div class="pdf-card">
+        <div class="txt">
+          <div class="num">№ 03</div>
+          <h3>Game Dev Project Ideas</h3>
+          <p>A shelf of project ideas ranging from weekend-sized to months-long.</p>
+        </div>
+        <iframe class="pdf-viewer" src="game-dev-project-ideas.pdf#toolbar=1&amp;navpanes=0" title="Game Dev Project Ideas"></iframe>
+        <div class="actions">
+          <button class="btn btn-fullscreen">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/>
+            </svg>
+            <span class="label">Fullscreen</span>
+          </button>
+          <a class="btn" href="game-dev-project-ideas.pdf" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7"/><polyline points="8 7 17 7 17 16"/>
+            </svg>
+            Open
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <strong>The Outscal Resource Archive</strong>
+    <span class="sep">·</span>
+    <span class="lockup">By <span class="wordmark" role="img" aria-label="Outscal"></span></span>
+    <span class="sep">·</span>
+    <span>Open under <a href="https://creativecommons.org/licenses/by/4.0/" style="color:var(--ink-soft)">CC BY 4.0</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.querySelectorAll(".pdf-card").forEach((card) => {
+    const frame = card.querySelector(".pdf-viewer");
+    const btn = card.querySelector(".btn-fullscreen");
+    if (!frame || !btn) return;
+    btn.addEventListener("click", () => {
+      if (document.fullscreenElement === frame) document.exitFullscreen();
+      else if (frame.requestFullscreen) frame.requestFullscreen();
+    });
+  });
+  document.addEventListener("fullscreenchange", () => {
+    const active = document.fullscreenElement;
+    document.querySelectorAll(".btn-fullscreen .label").forEach((lbl) => {
+      const frame = lbl.closest(".pdf-card").querySelector(".pdf-viewer");
+      lbl.textContent = (frame === active) ? "Exit fullscreen" : "Fullscreen";
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

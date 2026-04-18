@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Outscal Resource Archive</title>
+<meta name="description" content="An open archive of game development resources — stories, quizzes, and guides from the people building games." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+
+<style>
+  /* ---------------- HERO ---------------- */
+  .hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero .eyebrow { margin-bottom: 24px; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 9vw, 112px);
+    line-height: 0.96;
+    letter-spacing: -0.035em;
+    margin: 0 0 28px;
+    font-weight: 700;
+    max-width: 12ch;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(180deg, transparent 58%, var(--yellow) 58% 92%, transparent 92%);
+    padding: 0 .04em;
+  }
+  .hero p {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0 0 40px;
+  }
+  .hero .meta {
+    display: flex; gap: 40px; flex-wrap: wrap;
+    color: var(--muted); font-size: 12px;
+    text-transform: uppercase; letter-spacing: .12em;
+    font-family: var(--serif); font-weight: 500;
+  }
+  .hero .meta div { display: flex; flex-direction: column; gap: 6px; }
+  .hero .meta strong { color: var(--ink); font-size: 24px; font-weight: 700; letter-spacing: -0.01em; text-transform: none; font-family: var(--serif); }
+
+  /* ---------------- SECTIONS ---------------- */
+  .sections {
+    padding: 64px 0 80px;
+  }
+  .sections-intro {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 40px; gap: 16px; flex-wrap: wrap;
+  }
+  .sections-intro h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-weight: 700;
+  }
+  .sections-intro p { color: var(--muted); font-size: 14px; margin: 0; }
+
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  @media (max-width: 900px) { .section-grid { grid-template-columns: 1fr; } }
+
+  .section-card {
+    display: flex; flex-direction: column;
+    padding: 36px 32px 40px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    text-decoration: none;
+    color: inherit;
+    transition: background .2s ease;
+    min-height: 360px;
+    position: relative;
+  }
+  .section-card:hover { background: var(--paper-tint); }
+  .section-card .tag {
+    font-family: var(--serif);
+    font-size: 11px; letter-spacing: .14em;
+    color: var(--muted); text-transform: uppercase;
+    font-weight: 500;
+  }
+  .section-card h3 {
+    font-family: var(--serif);
+    font-size: 40px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 12px 0 16px;
+    font-weight: 700;
+    /* Reserve space for two lines so descriptions align across cards. */
+    min-height: 2.04em;
+  }
+  .section-card p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0 0 auto;
+  }
+  .section-card .stats {
+    display: flex; gap: 20px; flex-wrap: wrap;
+    margin: 32px 0 20px;
+    padding-top: 24px;
+    border-top: 1px dashed var(--rule);
+    font-size: 13px; color: var(--muted);
+  }
+  .section-card .stats strong { color: var(--ink); font-weight: 600; font-family: var(--serif); }
+  .section-card .cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; color: var(--ink);
+  }
+  .section-card .cta .arrow { transition: transform .2s ease; display: inline-block; }
+  .section-card:hover .cta .arrow { transform: translateX(4px); }
+  .section-card:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+  }
+
+  /* ---------------- SUB-LIBRARY PREVIEW (optional accent) ---------------- */
+  .library-preview {
+    padding: 40px 0 96px;
+    /* Offset the scroll target so the sticky masthead doesn't cover the heading. */
+    scroll-margin-top: 80px;
+  }
+  .library-preview .sections-intro { margin-bottom: 24px; }
+  .library-folders {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  @media (max-width: 900px) { .library-folders { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .library-folders { grid-template-columns: 1fr; } }
+  .folder {
+    padding: 20px 20px 24px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none; color: inherit;
+    transition: background .15s ease;
+    background: var(--paper);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .folder:hover { background: var(--paper-tint); }
+  .folder-preview {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    background: var(--paper-tint);
+  }
+  .folder-preview img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top;
+    display: block;
+    transition: transform .3s ease;
+  }
+  .folder:hover .folder-preview img { transform: scale(1.03); }
+  .folder .label {
+    font-family: var(--serif);
+    font-size: 18px; font-weight: 600;
+    letter-spacing: -0.015em;
+    margin-top: 4px;
+  }
+  .folder .count {
+    font-size: 11px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: .1em;
+  }
+
+  /* ---------------- PRACTICE CARD STACK ---------------- */
+  /* Same flex behaviour as other cards: <p> fills space, pushing the quiz-stack
+     (and stats + CTA) to the bottom. The explicit margin-top adds breathing room. */
+  .quiz-stack {
+    display: flex; gap: 8px;
+    margin-top: 36px;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: visible;
+  }
+  /* Coloured target icon — anchored to the top of the heading so it sits beside
+     the word "Practice", not mid-way down the reserved 2-line heading block. */
+  .practice-card .heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 12px 0 16px;
+  }
+  .practice-card .heading-row h3 { margin: 0; }
+  .card-icon-target {
+    width: 44px; height: 44px;
+    flex-shrink: 0;
+    transition: transform .25s ease;
+  }
+  .section-card.practice-card:hover .card-icon-target {
+    transform: rotate(12deg) scale(1.08);
+  }
+  .quiz-stack .tile {
+    flex: 1; min-width: 0;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    background: var(--paper-tint) center/cover no-repeat;
+    transition: transform .2s ease;
+  }
+  .section-card.practice-card:hover .quiz-stack .tile:nth-child(1) { transform: translateY(-2px) rotate(-1deg); }
+  .section-card.practice-card:hover .quiz-stack .tile:nth-child(2) { transform: translateY(-3px); }
+  .section-card.practice-card:hover .quiz-stack .tile:nth-child(3) { transform: translateY(-2px) rotate(1deg); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="index.html" aria-label="The Outscal Resource Archive — home">
+      <img class="mark" src="outscal.gif" alt="" aria-hidden="true" />
+      <span class="title">
+        <span>The Archive<span class="dot">.</span></span>
+        <span class="by">by Outscal</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="humans-of-gaming/index.html" >Stories</a>
+      <a href="practice/index.html">Practice</a>
+      <a href="#library">Library</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">An open archive · by Outscal</div>
+    <h1>The <span class="accent">Outscal</span> Resource Archive.</h1>
+    <p>Stories from the people building games, quizzes to test what you know, and guides to fill in what you don't. All open. All free.</p>
+    <div class="meta">
+      <div><strong>44</strong> stories</div>
+      <div><strong>29</strong> quizzes</div>
+      <div><strong>10</strong> guides</div>
+    </div>
+  </div>
+</section>
+
+<section class="sections">
+  <div class="wrap">
+    <div class="sections-intro">
+      <h2>Pick where to start.</h2>
+      <p>Three ways in — read, play, or browse.</p>
+    </div>
+    <div class="section-grid">
+
+      <a class="section-card" href="humans-of-gaming/index.html">
+        <span class="tag">Read</span>
+        <h3>Humans of Gaming</h3>
+        <p>Forty-four conversations with the people building games — founders, engineers, designers, producers. The winding paths, the first jobs, the bets that paid off.</p>
+        <div class="stats"><span><strong>44</strong> stories</span><span><strong>~5 min</strong> each</span></div>
+        <span class="cta">Start reading <span class="arrow">→</span></span>
+      </a>
+
+      <a class="section-card practice-card" href="practice/index.html">
+        <span class="tag">Play</span>
+        <div class="heading-row">
+          <h3>Practice</h3>
+          <svg class="card-icon-target" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="#0A0A0A" stroke-width="2.5"/>
+            <circle cx="24" cy="24" r="14" stroke="#0A0A0A" stroke-width="2.5"/>
+            <circle cx="24" cy="24" r="7.5" fill="#F5C518" stroke="#0A0A0A" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <p>Twenty-nine quizzes across Unity fundamentals, engine systems, and popular games. Short, focused, and built to show you what you don't know yet.</p>
+        <div class="quiz-stack" aria-hidden="true">
+          <div class="tile" style="background-image:url('practice/images/unity-event-function-clash-royale.png')"></div>
+          <div class="tile" style="background-image:url('practice/images/gamer-trivia-rdr2.png')"></div>
+          <div class="tile" style="background-image:url('practice/images/unity-animations.webp')"></div>
+        </div>
+        <div class="stats"><span><strong>29</strong> quizzes</span><span><strong>295</strong> questions</span></div>
+        <span class="cta">Take a quiz <span class="arrow">→</span></span>
+      </a>
+
+      <a class="section-card" href="#library">
+        <span class="tag">Browse</span>
+        <h3>Library</h3>
+        <p>Cheat sheets, roadmaps, project ideas, and deep-dives — compiled as PDFs, organised by category. Reference material you'll come back to.</p>
+        <div class="stats"><span><strong>10</strong> guides</span><span><strong>4</strong> categories</span></div>
+        <span class="cta">Open the library <span class="arrow">→</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="library-preview" id="library">
+  <div class="wrap">
+    <div class="sections-intro">
+      <h2>Library</h2>
+    </div>
+    <div class="library-folders">
+      <a class="folder" href="cheat-sheets/index.html">
+        <div class="folder-preview"><img src="assets/previews/cheat-sheets.jpg" alt="" loading="lazy" /></div>
+        <span class="count">3 PDFs</span>
+        <span class="label">Cheat Sheets</span>
+      </a>
+      <a class="folder" href="roadmaps-and-project-ideas/index.html">
+        <div class="folder-preview"><img src="assets/previews/roadmaps-and-project-ideas.jpg" alt="" loading="lazy" /></div>
+        <span class="count">3 PDFs</span>
+        <span class="label">Roadmaps &amp; Project Ideas</span>
+      </a>
+      <a class="folder" href="deep-dives/index.html">
+        <div class="folder-preview"><img src="assets/previews/deep-dives.jpg" alt="" loading="lazy" /></div>
+        <span class="count">2 PDFs</span>
+        <span class="label">Deep Dives</span>
+      </a>
+      <a class="folder" href="unity-hacks/index.html">
+        <div class="folder-preview"><img src="assets/previews/unity-hacks.jpg" alt="" loading="lazy" /></div>
+        <span class="count">2 PDFs</span>
+        <span class="label">Unity Hacks</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <strong>The Outscal Resource Archive</strong>
+    <span class="sep">·</span>
+    <span class="lockup">By <span class="wordmark" role="img" aria-label="Outscal"></span></span>
+    <span class="sep">·</span>
+    <span>Open under <a href="https://creativecommons.org/licenses/by/4.0/" style="color:var(--ink-soft)">CC BY 4.0</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
