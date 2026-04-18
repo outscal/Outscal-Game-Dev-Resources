@@ -244,9 +244,9 @@
     <h1>The <span class="accent">Outscal</span> Resource Archive.</h1>
     <p>Stories from the people building games, quizzes to test what you know, and guides to fill in what you don't. All open. All free.</p>
     <div class="meta">
-      <div><strong>44</strong> stories</div>
-      <div><strong>29</strong> quizzes</div>
-      <div><strong>10</strong> guides</div>
+      <div><strong data-count="stories">44</strong> stories</div>
+      <div><strong data-count="quizzes">29</strong> quizzes</div>
+      <div><strong data-count="guides">10</strong> guides</div>
     </div>
   </div>
 </section>
@@ -263,7 +263,7 @@
         <span class="tag">Read</span>
         <h3>Humans of Gaming</h3>
         <p>Forty-four conversations with the people building games — founders, engineers, designers, producers. The winding paths, the first jobs, the bets that paid off.</p>
-        <div class="stats"><span><strong>44</strong> stories</span><span><strong>~5 min</strong> each</span></div>
+        <div class="stats"><span><strong data-count="stories">44</strong> stories</span><span><strong>~5 min</strong> each</span></div>
         <span class="cta">Start reading <span class="arrow">→</span></span>
       </a>
 
@@ -279,11 +279,11 @@
         </div>
         <p>Twenty-nine quizzes across Unity fundamentals, engine systems, and popular games. Short, focused, and built to show you what you don't know yet.</p>
         <div class="quiz-stack" aria-hidden="true">
-          <div class="tile" style="background-image:url('practice/images/unity-event-function-clash-royale.png')"></div>
-          <div class="tile" style="background-image:url('practice/images/gamer-trivia-rdr2.png')"></div>
-          <div class="tile" style="background-image:url('practice/images/unity-animations.webp')"></div>
+          <div class="tile" style="background-image:url('assets/practice/unity-event-function-clash-royale.png')"></div>
+          <div class="tile" style="background-image:url('assets/practice/gamer-trivia-rdr2.png')"></div>
+          <div class="tile" style="background-image:url('assets/practice/unity-animations.webp')"></div>
         </div>
-        <div class="stats"><span><strong>29</strong> quizzes</span><span><strong>295</strong> questions</span></div>
+        <div class="stats"><span><strong data-count="quizzes">29</strong> quizzes</span><span><strong data-count="questions">295</strong> questions</span></div>
         <span class="cta">Take a quiz <span class="arrow">→</span></span>
       </a>
 
@@ -291,7 +291,7 @@
         <span class="tag">Browse</span>
         <h3>Library</h3>
         <p>Cheat sheets, roadmaps, project ideas, and deep-dives — compiled as PDFs, organised by category. Reference material you'll come back to.</p>
-        <div class="stats"><span><strong>10</strong> guides</span><span><strong>4</strong> categories</span></div>
+        <div class="stats"><span><strong data-count="guides">10</strong> guides</span><span><strong data-count="categories">4</strong> categories</span></div>
         <span class="cta">Open the library <span class="arrow">→</span></span>
       </a>
 
@@ -307,22 +307,22 @@
     <div class="library-folders">
       <a class="folder" href="cheat-sheets/index.html">
         <div class="folder-preview"><img src="assets/previews/cheat-sheets.jpg" alt="" loading="lazy" /></div>
-        <span class="count">3 PDFs</span>
+        <span class="count"><span data-count="folder.cheat-sheets">3</span> PDFs</span>
         <span class="label">Cheat Sheets</span>
       </a>
       <a class="folder" href="roadmaps-and-project-ideas/index.html">
         <div class="folder-preview"><img src="assets/previews/roadmaps-and-project-ideas.jpg" alt="" loading="lazy" /></div>
-        <span class="count">3 PDFs</span>
+        <span class="count"><span data-count="folder.roadmaps-and-project-ideas">3</span> PDFs</span>
         <span class="label">Roadmaps &amp; Project Ideas</span>
       </a>
       <a class="folder" href="deep-dives/index.html">
         <div class="folder-preview"><img src="assets/previews/deep-dives.jpg" alt="" loading="lazy" /></div>
-        <span class="count">2 PDFs</span>
+        <span class="count"><span data-count="folder.deep-dives">2</span> PDFs</span>
         <span class="label">Deep Dives</span>
       </a>
       <a class="folder" href="unity-hacks/index.html">
         <div class="folder-preview"><img src="assets/previews/unity-hacks.jpg" alt="" loading="lazy" /></div>
-        <span class="count">2 PDFs</span>
+        <span class="count"><span data-count="folder.unity-hacks">2</span> PDFs</span>
         <span class="label">Unity Hacks</span>
       </a>
     </div>
@@ -338,6 +338,8 @@
     <span>Open under <a href="https://creativecommons.org/licenses/by/4.0/" style="color:var(--ink-soft)">CC BY 4.0</a></span>
   </div>
 </footer>
+
+<script src="assets/counts.js"></script>
 
 </body>
 </html>
