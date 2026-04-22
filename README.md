@@ -31,4 +31,4 @@ This project is licensed under the [Creative Commons Attribution 4.0 Internation
 
 ## Credits
 
-Created and maintained by [Outscal](https://www.outscal.com).
+Created and maintained by [Outscal](https://outscal.com).
